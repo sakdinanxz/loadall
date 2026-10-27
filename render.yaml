@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: loadall
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: MAX_WORKERS
+        value: "2"
+      - key: MAX_DURATION
+        value: "10800"
